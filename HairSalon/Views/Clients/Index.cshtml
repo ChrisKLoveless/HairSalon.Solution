@@ -13,10 +13,10 @@
   }
   else
   {
-    <ul>
+    <ul class="row">
       @foreach (Client client in Model)
       {
-        <li id="client">@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
+        <li id="client">@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | <em>@client.Stylist.Name</em></li>
       }
     </ul>
   }

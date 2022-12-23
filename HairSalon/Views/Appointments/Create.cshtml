@@ -1,20 +1,22 @@
 @{
-    Layout = "_Layout";
+  Layout = "_Layout";
 }
 
 @model HairSalon.Models.Appointment
 
-<h3>Add a new Appointment</h3><br>
+<div class="container">
+  <h3 class="jumbotron">Add a new Appointment</h3><br>
 
-@using (Html.BeginForm())
-{
-    @Html.TextBoxFor(model => model.Description, new { placeholder = "Description", style = "text-align: center;" } )<br><br>
+  @using (Html.BeginForm())
+  {
+    @Html.TextBoxFor(model => model.Description, new { placeholder = "Description", style = "text-align: center;" })<br><br>
     <label for="date">Date and Time</label>
-    <input type="datetime-local" name="date" id="date">
-    
+    <input type="datetime-local" name="date" id="date"><br><br>
+
     @Html.LabelFor(model => model.Client)
-    @Html.DropDownList("ClientId")<br>
+    @Html.DropDownList("ClientId")<br><br>
 
     <input type="submit" value="Add new appointment" class="btn btn-warning" /><br><br>
-}
-<p>@Html.ActionLink("Show all clients", "Index", "Clients")</p>
+  }
+  <p>@Html.ActionLink("Show all clients", "Index", "Clients")</p>
+</div>

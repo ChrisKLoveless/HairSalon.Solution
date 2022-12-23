@@ -20,12 +20,13 @@ div#footer {
   width: 100%;
   color: #CCC;
   background: #333;
-  padding: 8px;
+  padding: 10px;
 }
 
 .jumbotron {
   background: #333;
   color: #CCC;
+  padding: 50px;
 }
 
 li#stylist {

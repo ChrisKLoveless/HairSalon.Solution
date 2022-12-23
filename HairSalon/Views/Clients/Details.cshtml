@@ -9,12 +9,12 @@
   <h2 class="jumbotron">Client Details</h2>
 
   <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
-  <h3>@Html.DisplayNameFor(model => model.RegularStyle): @Html.DisplayFor(model => model.RegularStyle)<h3>
+  <h3>@Html.DisplayNameFor(model => model.PhoneNumber): @Html.DisplayFor(model => model.PhoneNumber)<h3>
 
 
   @if (@Model.Appointments.Count == 0)
   {
-    <h3>No appointments have been added to this Client yet!</h3>
+    <h3><strong>No appointments have been added for @Model.Name</strong></h3>
   }
   else
   {
