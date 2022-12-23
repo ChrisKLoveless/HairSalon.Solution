@@ -9,6 +9,6 @@
 @using (Html.BeginForm())
 {
   @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", style = "text-align: center;" })
-  <input type="submit" value="Add a new stylist" class="btn btn-dark"/>
+  <input type="submit" value="Add a new stylist" class="btn btn-dark" />
 }
 <p>@Html.ActionLink("Show all Stylists", "Index")</p>
