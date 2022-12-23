@@ -39,3 +39,9 @@ li#client {
   padding: 10px;
   list-style-image: url(https://img.icons8.com/office/34/barber-chair.png);
 }
+
+li#appointment {
+  list-style-position: inside;
+  padding: 10px;
+  list-style-image: url(https://img.icons8.com/cotton/24/appointment-time--v2.png);
+}

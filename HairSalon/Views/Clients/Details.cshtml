@@ -12,11 +12,24 @@
   <h3>@Html.DisplayNameFor(model => model.RegularStyle): @Html.DisplayFor(model => model.RegularStyle)<h3>
 
 
-  <h3>@Model.Name | @Model.Stylist.Name</h3>
+  @if (@Model.Appointments.Count == 0)
+  {
+    <h3>No appointments have been added to this Client yet!</h3>
+  }
+  else
+  {
+    <h3>Appointments:</h3>
+    <ul>
+      @foreach (Appointment appointment in Model.Appointments)
+      {
+        <li id="appointment">@appointment.Description | @appointment.Date</li>
+      }
+    </ul>
+  }
 
   <br><br>
   <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
   <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
-  <p>@Html.ActionLink("Add new Note", "Create", "Notes")</p>
+  <p>@Html.ActionLink("Add new Appointment", "Create", "Appointments")</p>
   <p>@Html.ActionLink("Back to list", "Index")</p>
 </div>
