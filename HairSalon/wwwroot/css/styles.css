@@ -6,6 +6,11 @@ a {
 body {
   background-color: rgb(83, 135, 165);
   color: black;
+  padding-top: 40px;
+}
+
+div.container {
+  text-align: center;
 }
 
 div#footer {
@@ -16,4 +21,21 @@ div#footer {
   color: #CCC;
   background: #333;
   padding: 8px;
+}
+
+.jumbotron {
+  background: #333;
+  color: #CCC;
+}
+
+li#stylist {
+  list-style-position: inside;
+  padding: 10px;
+  list-style-image: url(https://img.icons8.com/bubbles/36/barbershop.png);
+}
+
+li#client {
+  list-style-position: inside;
+  padding: 10px;
+  list-style-image: url(https://img.icons8.com/office/34/barber-chair.png);
 }
