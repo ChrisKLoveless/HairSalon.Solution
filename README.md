@@ -43,7 +43,7 @@ This project is a simple web application for a business to keep track of Stylist
 
 ## Known Bugs
 
-* _None known_
+* _On the client details page, the appointment link should route to appointment details instead it is routed back to client details_
 * If any bugs are found please email a brief description to: ```chriskloveless@gmail.com```
 
 ## License

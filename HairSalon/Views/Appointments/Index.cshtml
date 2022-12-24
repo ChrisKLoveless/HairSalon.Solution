@@ -7,6 +7,7 @@
 <div class="container">
   <h1 class="jumbotron">Appointments</h1>
 
+  <div class="jumbotron" id="content">
   @if (@Model.Count == 0)
   {
     <h3>No appointments have been added yet!</h3>
@@ -23,4 +24,5 @@
 
   <p>@Html.ActionLink("Add new Appointment", "Create", "Appointments")</p>
   <p>@Html.ActionLink("Home", "Index", "Home")</p>
+  </div>
 </div>

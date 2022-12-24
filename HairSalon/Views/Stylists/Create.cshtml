@@ -7,10 +7,12 @@
 <div class="container">
   <h3 class="jumbotron">Add a new Stylist:</h3>
 
-  @using (Html.BeginForm())
-  {
-    @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", style = "text-align: center;" })
-    <input type="submit" value="Add a new stylist" class="btn btn-warning" />
-  }
-  <p>@Html.ActionLink("Show all Stylists", "Index")</p>
+  <div class="jumbotron" id="content">
+    @using (Html.BeginForm())
+    {
+      @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", style = "text-align: center;" })
+      <input type="submit" value="Add a new stylist" class="btn btn-light" />
+    }
+    <p>@Html.ActionLink("Show all Stylists", "Index")</p>
+  </div>
 </div>

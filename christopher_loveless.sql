@@ -28,7 +28,7 @@ CREATE TABLE `appointments` (
   `Date` datetime DEFAULT NULL,
   `Description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`AppointmentId`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,6 @@ CREATE TABLE `appointments` (
 
 LOCK TABLES `appointments` WRITE;
 /*!40000 ALTER TABLE `appointments` DISABLE KEYS */;
-INSERT INTO `appointments` VALUES (3,4,'2022-12-24 19:49:00','asda'),(4,4,'2022-12-31 15:53:00','ayyy'),(5,3,'2022-12-14 15:54:00','werwr');
 /*!40000 ALTER TABLE `appointments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +53,7 @@ CREATE TABLE `clients` (
   `Name` varchar(45) DEFAULT NULL,
   `PhoneNumber` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`ClientId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +62,6 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (2,1,'Joey','5032709966'),(3,1,'David','0526698989'),(4,2,'gg','5689656565');
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,7 +76,7 @@ CREATE TABLE `stylists` (
   `StylistId` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,7 +85,6 @@ CREATE TABLE `stylists` (
 
 LOCK TABLES `stylists` WRITE;
 /*!40000 ALTER TABLE `stylists` DISABLE KEYS */;
-INSERT INTO `stylists` VALUES (1,'Rosey'),(2,'George');
 /*!40000 ALTER TABLE `stylists` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -100,4 +97,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-23 16:07:08
+-- Dump completed on 2022-12-23 16:34:50

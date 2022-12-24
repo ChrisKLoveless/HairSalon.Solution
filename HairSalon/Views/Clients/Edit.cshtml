@@ -7,20 +7,22 @@
 <div class="container">
   <h2 class="jumbotron">Edit</h2>
 
-  <h4>Edit this Client: @Html.DisplayFor(model => model.Name)</h4>
+  <div class="jumbotron" id="content">
+    <h4>Edit this Client: @Html.DisplayFor(model => model.Name)</h4>
 
-  @using (Html.BeginForm())
-  {
-    @Html.HiddenFor(model => model.ClientId)
+    @using (Html.BeginForm())
+    {
+      @Html.HiddenFor(model => model.ClientId)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
-    @Html.LabelFor(model => model.PhoneNumber)
-    @Html.EditorFor(model => model.PhoneNumber)
+      @Html.LabelFor(model => model.Name)
+      @Html.EditorFor(model => model.Name)
+      @Html.LabelFor(model => model.PhoneNumber)
+      @Html.EditorFor(model => model.PhoneNumber)
 
-    @Html.LabelFor(model => model.Stylist)
-    @Html.DropDownList("StylistId")
+      @Html.LabelFor(model => model.Stylist)
+      @Html.DropDownList("StylistId")
 
-    <input type="submit" value="Save" class="btn btn-warning"/>
-  }
+      <input type="submit" value="Save" class="btn btn-warning" />
+    }
+  </div>
 </div>

@@ -3,24 +3,26 @@
 }
 
 @model HairSalon.Models.Appointment
-@using HairSalon.Models
+
 
 <div class="container">
   <h2 class="jumbotron">Appointment Details</h2>
 
-  <h3>@Html.DisplayNameFor(model => model.Client.Name): @Html.DisplayFor(model => model.Client.Name)<h3>
-  <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
-  <h3>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)<h3>
+  <div class="jumbotron" id="content">
+    <h3>@Html.DisplayNameFor(model => model.Client.Name): @Html.DisplayFor(model => model.Client.Name)<h3>
+        <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
+            <h3>@Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(model => model.Date)<h3>
 
-    <h3>Appointment:</h3>
-    <ul>
-        <li id="appointment">@Model.Description | @Model.Date</li>
-    </ul>
-  
+                <h3>Appointment:</h3>
+                <ul>
+                  <li id="appointment">@Model.Description | @Model.Date</li>
+                </ul>
 
-  <br><br>
-  <p>@Html.ActionLink("Edit Appointment", "Edit", new { id = Model.AppointmentId })</p>
-  <p>@Html.ActionLink("Delete Appointment", "Delete", new { id = Model.AppointmentId })</p>
-  <p>@Html.ActionLink("Add new Appointment", "Create", "Appointments")</p>
-  <p>@Html.ActionLink("Back to list", "Index")</p>
+
+                <br><br>
+                <p>@Html.ActionLink("Edit Appointment", "Edit", new { id = Model.AppointmentId })</p>
+                <p>@Html.ActionLink("Delete Appointment", "Delete", new { id = Model.AppointmentId })</p>
+                <p>@Html.ActionLink("Add new Appointment", "Create", "Appointments")</p>
+                <p>@Html.ActionLink("Back to list", "Index")</p>
+  </div>
 </div>

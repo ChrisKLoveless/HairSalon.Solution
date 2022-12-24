@@ -11,6 +11,12 @@ body {
 
 div.container {
   text-align: center;
+  margin: auto;
+}
+
+div#content {
+  background-color: rgb(189, 156, 116);
+  margin: auto;
 }
 
 div#footer {
@@ -21,6 +27,7 @@ div#footer {
   color: #CCC;
   background: #333;
   padding: 10px;
+  margin: auto;
 }
 
 .jumbotron {

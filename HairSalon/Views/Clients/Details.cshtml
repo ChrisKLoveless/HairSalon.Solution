@@ -8,28 +8,31 @@
 <div class="container">
   <h2 class="jumbotron">Client Details</h2>
 
-  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
-  <h3>@Html.DisplayNameFor(model => model.PhoneNumber): @Html.DisplayFor(model => model.PhoneNumber)<h3>
+  <div class="jumbotron" id="content">
+    <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
+        <h3>@Html.DisplayNameFor(model => model.PhoneNumber): @Html.DisplayFor(model => model.PhoneNumber)<h3>
 
 
-  @if (@Model.Appointments.Count == 0)
-  {
-    <h3><strong>No appointments have been added for @Model.Name</strong></h3>
-  }
-  else
-  {
-    <h3>Appointments:</h3>
-    <ul>
-      @foreach (Appointment appointment in Model.Appointments)
-      {
-        <li id="appointment">@Html.ActionLink($"{appointment.Client.Name}", "Details", new { id = appointment.AppointmentId }) | @appointment.Date</li>
-      }
-    </ul>
-  }
+            @if (@Model.Appointments.Count == 0)
+            {
+              <h3><strong>No appointments have been added for @Model.Name</strong></h3>
+            }
+            else
+            {
+              <h3>Appointments:</h3>
+              <ul>
+                @foreach (Appointment appointment in Model.Appointments)
+                {
+                  <li id="appointment">@Html.ActionLink($"{appointment.Description}", "Details", new { id =
+                appointment.AppointmentId }) | @appointment.Date</li>
+                }
+              </ul>
+            }
 
-  <br><br>
-  <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-  <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
-  <p>@Html.ActionLink("Add new Appointment", "Create", "Appointments")</p>
-  <p>@Html.ActionLink("Back to list", "Index")</p>
+            <br><br>
+            <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
+            <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
+            <p>@Html.ActionLink("Add new Appointment", "Create", "Appointments")</p>
+            <p>@Html.ActionLink("Back to list", "Index")</p>
+  </div>
 </div>
