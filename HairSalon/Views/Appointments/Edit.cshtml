@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Appointment
+
+<div class="container">
+  <h2 class="jumbotron">Edit</h2>
+
+  <h4>Edit this Appointment: @Html.DisplayFor(model => model.Description)</h4>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.AppointmentId)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.Date)
+    @Html.EditorFor(model => model.Date)
+
+    @Html.LabelFor(model => model.Client)
+    @Html.DropDownList("ClientId")
+
+    <input type="submit" value="Save" class="btn btn-warning"/>
+  }
+</div>
