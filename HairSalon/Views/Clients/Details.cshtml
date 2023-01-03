@@ -23,7 +23,7 @@
               <ul>
                 @foreach (Appointment appointment in Model.Appointments)
                 {
-                  <li id="appointment">@Html.ActionLink($"{appointment.Description}", "Details", new { id =
+                  <li id="appointment">@Html.ActionLink($"{appointment.Description}", "Details", "Appointments", new { id =
                 appointment.AppointmentId }) | @appointment.Date</li>
                 }
               </ul>
